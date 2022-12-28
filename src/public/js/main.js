@@ -23,4 +23,8 @@ $(function () {
             </div>`
         )
     })
+
+    socket.on('disconnect', function () {
+        console.log('me dedsconecte del sockket wiiii ');
+    })
 })

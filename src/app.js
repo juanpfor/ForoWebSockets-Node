@@ -8,14 +8,13 @@ const app = express();
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname , 'public')))
-
 app.use(morgan("dev"));
 
 app.use(cors());
 
 //listenig routes
 // app.use("/api", require("./src/router/routes_index"));
+app.use(express.static(path.join(__dirname , 'public')))
 
 
 module.exports = app 
