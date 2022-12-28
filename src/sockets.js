@@ -3,7 +3,11 @@ module.exports =  function (io) {
         console.log(`new user conection ${socket}`);
 
         socket.on('send email', data =>{
-            io.sockets.emit('forward message' , data)
+            io.sockets.emit('forward message' ,{
+                message : data ,
+                username : 'juan',
+                img : 'nose que pasa'
+            })
         })
       })
 }
